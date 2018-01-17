@@ -7,7 +7,7 @@ exports.assetsPath = function (_path) {
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory;
   return path.posix.join(assetsSubDirectory, _path);
-}
+};
 
 exports.cssLoaders = function (options) {
   options = options || {};
@@ -22,7 +22,7 @@ exports.cssLoaders = function (options) {
         loader = loader + '-loader';
         extraParamChar = '?';
       }
-      return loader + (options.sourceMap ? extraParamChar + 'sourceMap' : '')
+      return loader + (options.sourceMap ? extraParamChar + 'sourceMap' : '');
     }).join('!');
 
     // Extract CSS when that option is specified
@@ -51,7 +51,7 @@ exports.cssLoaders = function (options) {
 
 // Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
-  var output = []
+  var output = [];
   var loaders = exports.cssLoaders(options);
   for (var extension in loaders) {
     var loader = loaders[extension];

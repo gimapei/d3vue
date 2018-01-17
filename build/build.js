@@ -12,7 +12,7 @@ var config = require('../config');
 var webpackConfig = require('./webpack.prod.conf');
 
 var spinner = ora('building for production...');
-spinner.start()
+spinner.start();
 
 var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory);
 shell.rm('-rf', assetsPath);
@@ -23,7 +23,7 @@ shell.config.silent = false;
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop();
-  if (err) throw err;
+  if (err) { throw err; }
   process.stdout.write(stats.toString({
     colors: true,
     modules: false,
