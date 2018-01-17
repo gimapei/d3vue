@@ -1,7 +1,7 @@
 <template>
   <div id="holder">
     <div class="links">
-      <router-link v-if="prev" :to="prev.path" class="prev"> < prev </router-link>
+      <router-link v-if="prev" :to="prev.path" class="prev">  prev </router-link>
       <a :href="sourceHref" class="source"> source </a>
       <router-link v-if="next" :to="next.path" class="next"> next > </router-link>
     </div>
